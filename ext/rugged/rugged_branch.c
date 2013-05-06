@@ -167,7 +167,7 @@ static VALUE rb_git_branch_delete(VALUE self)
 
 static int cb_branch__each_name(const char *branch_name, git_branch_t branch_type, void *payload)
 {
-	rb_yield(rugged_str_new2(branch_name, rb_utf8_encoding()));
+	rb_yield(rb_str_new_utf8(branch_name));
 	return GIT_OK;
 }
 
