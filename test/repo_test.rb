@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'base64'
+require 'pathname'
 
 class RepositoryTest < Rugged::TestCase
   include Rugged::RepositoryAccess
